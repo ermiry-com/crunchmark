@@ -5,6 +5,8 @@ TARGET      := crunchmark
 PTHREAD 	:= -l pthread
 MATH 		:= -lm
 
+CLIBS		:= -l clibs
+
 DEVELOPMENT	:= -D CRUNCH_DEBUG
 
 DEFINES		:= -D _GNU_SOURCE
@@ -53,7 +55,7 @@ endif
 
 CFLAGS += $(COMMON)
 
-LIB         := -L /usr/local/lib $(PTHREAD) $(MATH)
+LIB         := -L /usr/local/lib $(PTHREAD) $(MATH) $(CLIBS)
 INC         := -I $(INCDIR) -I /usr/local/include
 INCDEP      := -I $(INCDIR)
 
